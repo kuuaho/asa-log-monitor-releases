@@ -1,2 +1,43 @@
-# asa-log-monitor-releases
-ASA Log Monitor for Windows: official binary downloads and signed application updates.
+# ASA Log Monitor
+
+ARK: Survival Ascendedの画面に表示されるトライブログと参加通知を読み取り、登録したDiscordチャンネルへ届けるWindows x64用アプリです。1台のPC・1つのARK画面を対象に、複数のDiscord送信先を設定できます。
+
+このリポジトリは配布用です。アプリの開発用ソース、Botトークン、個人の設定・履歴・保留データは公開しません。
+
+## ダウンロード
+
+- [最新版のリリース一覧](https://github.com/kuuaho/asa-log-monitor-releases/releases/latest)
+- [v1.6.2 配布用EXE](https://github.com/kuuaho/asa-log-monitor-releases/releases/download/v1.6.2/ASA_Log_Monitor_v1.6.2_Windows_x64.exe)
+- [v1.6.2 ZIP](https://github.com/kuuaho/asa-log-monitor-releases/releases/download/v1.6.2/ASA_Log_Monitor_v1.6.2_Windows_x64.zip)
+
+EXEは付属ファイルをまとめた自己解凍版です。新しい空フォルダーへ展開し、中の`ASA_Log_Monitor.exe`を起動します。ZIPもすべて展開してください。付属ファイルが必要なため、アプリEXEだけを別の場所へ移動しないでください。
+
+旧版から移る場合は、初回起動の前に同梱の「更新手順.txt」を確認し、停止済みの旧フォルダー全体をバックアップしてください。設定・履歴・保留は`runtime`に保存されます。
+
+## 次回からの更新
+
+v1.6.1以前からは、v1.6.2を一度手動で導入します。対応版の導入後は「停止」→「アップデート」で新版を確認・取得し、確認画面で「はい」を選ぶと更新して終了します。完了の案内が出てから、同じ場所のアプリを手動で起動し直してください。
+
+設定・履歴・保留は保持します。更新情報の署名と配布物全体を検証し、確認できない更新は適用しません。公開サイトの停止や更新情報の期限切れで取得できない場合も、今の版を使い続けられます。
+
+Windows向けのコード署名は未対応です。更新内容の署名確認とは別に、SmartScreenが警告する場合があります。
+
+## 主な機能と範囲
+
+- トライブログの文字通知、検出した日本時間、順番・送信先別の保留管理
+- `/logbot start`によるDiscord通知先の追加、種類別の通知先、連続ログのまとめ投稿
+- オンライン通知、手動停止・読み取り不能などの理由付きオフライン通知
+- 参加バナーの表示名と検出時刻の記録、指定した名前の通知
+- 予定メンテナンス、ARK再接続、ログ再表示、再参加専用アプリ
+
+OCRの誤読や取りこぼしは残り得ます。画面に出なかった記録、完全な参加者名簿・固有ID・正確な退出時刻は取得できません。PCの強制終了・停電・完全な通信断を外部から見守る機能はありません。
+
+## v1.6.2の確認結果
+
+- 全体試験：2455件、失敗0・エラー0・スキップ3
+- 両アプリEXEと検証したソース・付属資源の一致を確認
+- ZIP内1320ファイルのハッシュ・CRCを確認
+
+実GUI・実ゲーム・実Discord投稿・別PCを操作した通し試験は実施していません。
+
+詳しい設定は同梱の「使い方.txt」、試験範囲と未確認事項は「検証結果.txt」を参照してください。
